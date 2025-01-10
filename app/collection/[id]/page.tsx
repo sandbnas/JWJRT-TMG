@@ -86,9 +86,12 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
           <div>
             <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
             <p className="text-gray-600 mb-4">{product.description}</p>
-            <p className="text-2xl font-bold text-blue-600">
-              ${product.price.toLocaleString()}
-            </p>
+            <Link 
+              href={`/contact?product=${encodeURIComponent(product.name)}`}
+              className="inline-block bg-gold text-white px-6 py-3 rounded-md hover:bg-light-gold hover:text-charcoal transition-colors mb-6"
+            >
+              Contact for Price
+            </Link>
           </div>
 
           <div>

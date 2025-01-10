@@ -1,4 +1,25 @@
+'use client'
+
+import { useSearchParams } from 'next/navigation'
+import { useEffect } from 'react'
+
 export default function ContactPage() {
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    const productName = searchParams.get('product')
+    if (productName) {
+      const subjectInput = document.getElementById('subject') as HTMLInputElement
+      const messageInput = document.getElementById('message') as HTMLTextAreaElement
+      if (subjectInput) {
+        subjectInput.value = `Price inquiry for ${productName}`
+      }
+      if (messageInput) {
+        messageInput.value = `I would like to know the price for ${productName}.`
+      }
+    }
+  }, [searchParams])
+
   return (
     <div className="bg-off-white min-h-screen">
       <section className="py-16 bg-cream">
@@ -70,18 +91,10 @@ export default function ContactPage() {
       <section className="py-16 bg-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-serif mb-6 text-charcoal">Visit Our Showroom</h2>
-            <p className="text-charcoal mb-4">
-              123 Luxury Lane, Gemstone City, JW 12345
-            </p>
-            <p className="text-charcoal mb-4">
-              Monday - Friday: 10am - 7pm<br />
-              Saturday: 11am - 6pm<br />
-              Sunday: Closed
-            </p>
+            <h2 className="text-3xl font-serif mb-6 text-charcoal">Get in Touch</h2>
             <p className="text-charcoal">
               Phone: +1 (555) 123-4567<br />
-              Email: info@luxejewels.com
+              Email: info@jawahraat.com
             </p>
           </div>
         </div>

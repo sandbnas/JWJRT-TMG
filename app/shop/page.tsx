@@ -39,7 +39,12 @@ export default function ShopPage() {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center text-white">
                     <h3 className="text-xl mb-2">{product.name}</h3>
-                    <p className="mb-4">{product.price}</p>
+                    <Link 
+                      href={`/contact?product=${encodeURIComponent(product.name)}`}
+                      className="mb-4 text-gold hover:text-light-gold transition-colors"
+                    >
+                      Contact for Price
+                    </Link>
                     <Link href={`/product/${product.id}`} className="bg-gold text-white px-4 py-2 rounded hover:bg-light-gold hover:text-charcoal transition-colors">
                       View Details
                     </Link>

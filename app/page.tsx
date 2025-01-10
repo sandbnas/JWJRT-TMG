@@ -113,6 +113,7 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-brown/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center text-off-white p-4">
                       <h3 className="text-xl mb-2 text-gold">{product.name}</h3>
                       <p className="mb-4 text-off-white text-sm text-center">{product.description}</p>
+                      <p className="mb-4 text-gold text-sm">Contact for Price</p>
                       <span className="bg-orange text-off-white px-4 py-2 rounded hover:bg-carmine transition-colors">
                         View Details
                       </span>
