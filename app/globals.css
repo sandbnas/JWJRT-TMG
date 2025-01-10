@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --beige: #F5E6D3;
+  --gold: #C5A572;
+  --carmine: #9A031E;
+  --orange: #E36414;
+  --brown: #460B2F;
+  --off-white: #FAF3EA;
+  --light-gold: #D4BC94;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--brown);
+  background-color: var(--off-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--brown);
+}
+
