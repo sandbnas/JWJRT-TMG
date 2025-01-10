@@ -1,4 +1,4 @@
-# Jawahraat Website
+# JJ Website
 
 A Next.js-based jewelry e-commerce website featuring a collection of luxury jewelry pieces.
 
